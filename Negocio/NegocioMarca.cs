@@ -37,6 +37,10 @@ namespace Negocio
 
                 throw ex;
             }
+            finally
+            {
+                Datos.CerrarConexionDB();
+            }
         }
     }
 }
