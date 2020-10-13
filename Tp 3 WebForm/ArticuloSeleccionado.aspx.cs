@@ -1,11 +1,15 @@
 ﻿using Dominio;
+using Microsoft.Ajax.Utilities;
 using Negocio;
+using System.Dynamic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Globalization;
 using System.Web.UI.WebControls;
+using System.Web.SessionState;
 
 namespace Tp_3_WebForm
 {
@@ -14,9 +18,9 @@ namespace Tp_3_WebForm
         public Articulo MostrarArticulo { get; set; }
         public List<Articulo> ListaArticulos { get; set; }
 
-        public List<Carrito> ListaCarro = new List<Carrito>();
+        public List<CarritoCompra> ListaCarro = new List<CarritoCompra>();
 
-        public Carrito Carro = new Carrito();
+        public CarritoCompra Carro = new CarritoCompra();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +28,7 @@ namespace Tp_3_WebForm
 
             if (!IsPostBack)
             {
-                //////
+                TxtCantidad.Text = Convert.ToString(1);
             }
 
             try
@@ -45,12 +49,47 @@ namespace Tp_3_WebForm
 
         protected void BtnDisminuir_Click(object sender, EventArgs e)
         {
+            int GuardarValor = Convert.ToInt32(TxtCantidad.Text);
+            int NuevoValor = 0;
 
+            if (GuardarValor >= 2)
+            {
+                NuevoValor = GuardarValor - 1;
+
+                TxtCantidad.Text = Convert.ToString(NuevoValor);
+            }
         }
 
         protected void BtnAumentar_Click(object sender, EventArgs e)
         {
+            int GuardarValor = Convert.ToInt32(TxtCantidad.Text);
+            int NuevoValor = 0;
 
+            if (GuardarValor >= 1)
+            {
+                NuevoValor = GuardarValor + 1;
+
+                TxtCantidad.Text = Convert.ToString(NuevoValor);
+            }
+        }
+
+        protected void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            if (MostrarArticulo != null)
+            {
+                Carro.Cantidad = Convert.ToInt32(TxtCantidad.Text);
+                Carro.Articulo = MostrarArticulo;
+
+                if (Session[Session.SessionID + "Lista"] != null)
+                {
+                    ListaCarro = (List<CarritoCompra>)Session[Session.SessionID + "Lista"];
+                }
+
+                ListaCarro.Add(Carro);
+                Session[Session.SessionID + "Lista"] = ListaCarro;
+
+                Response.Redirect("Carrito.aspx");
+            }
         }
     }
 }

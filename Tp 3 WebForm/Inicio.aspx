@@ -1,15 +1,14 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Tp_3_WebForm._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Tp_3_WebForm._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>Probando Texto</h1>
-
+    
     <div class="container">
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="<%#Eval("UrlImagen") %>" class="card-img top" style="max-width: 300px; max-height: 150px" alt="Error" />
+                        <img src="<%#Eval("UrlImagen") %>" class="card-img top" style="max-width: 250px; max-height: 300px" alt="Error" />
                         <div class="card-body cards">
                             <h5 class="card-tittle" style="font-size: 15px"><%#Eval("Nombre")%></h5>
                             <p class="card-text" style="font-size: 15px"><%#Eval("Descripcion")%></p>
@@ -21,7 +20,8 @@
         </asp:Repeater>
 
     </div>
-
-
+    <br />
+    <br />
+    
 
 </asp:Content>
