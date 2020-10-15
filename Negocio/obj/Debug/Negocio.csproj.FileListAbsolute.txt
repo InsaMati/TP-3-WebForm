@@ -7,3 +7,12 @@ C:\Users\matia\source\repos\Tp 3 WebForm\Negocio\obj\Debug\Negocio.csproj.CoreCo
 C:\Users\matia\source\repos\Tp 3 WebForm\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\matia\source\repos\Tp 3 WebForm\Negocio\obj\Debug\Negocio.dll
 C:\Users\matia\source\repos\Tp 3 WebForm\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\bin\Debug\Negocio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\bin\Debug\Dominio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\obj\Debug\Negocio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Negocio\obj\Debug\Negocio.pdb

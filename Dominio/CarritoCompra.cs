@@ -10,5 +10,6 @@ namespace Dominio
     {
         public Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
+        public int Precio { get; set; }
     }
 }

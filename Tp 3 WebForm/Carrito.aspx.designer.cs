@@ -11,7 +11,7 @@ namespace Tp_3_WebForm
 {
 
 
-    public partial class Carrito
+    public partial class WebForm1
     {
     }
 }

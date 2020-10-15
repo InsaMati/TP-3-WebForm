@@ -4,3 +4,9 @@ C:\Users\matia\source\repos\Tp 3 WebForm\Dominio\obj\Debug\Dominio.csprojAssembl
 C:\Users\matia\source\repos\Tp 3 WebForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\matia\source\repos\Tp 3 WebForm\Dominio\obj\Debug\Dominio.dll
 C:\Users\matia\source\repos\Tp 3 WebForm\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWebForm\Dominio\obj\Debug\Dominio.pdb
