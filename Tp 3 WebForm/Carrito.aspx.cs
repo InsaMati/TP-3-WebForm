@@ -21,17 +21,26 @@ namespace Tp_3_WebForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+           
+            
+            ListaCarrito = (List < CarritoCompra >) Session[Session.SessionID + "Lista"];
+
+            if(ListaCarrito != null)
             {
-                ListaCarrito = (List < CarritoCompra > Session["Lista"]);
+                var Eliminar = Request.QueryString["ID"];
+
+                if (Eliminar != null)
+                {
+                    CarritoCompra vaciado = ListaCarrito.Find(j => j.Articulo.Id == int.Parse(Eliminar));
+                }
+
+
+
 
 
             }
-            catch (Exception ex)
-            {
 
-                throw;
-            }
+           
         }
     }
 }

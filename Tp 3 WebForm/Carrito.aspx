@@ -2,17 +2,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <table class="table">
-        <%if( != null) %>
+
+        <%if(ListaCarrito != null) 
+
+        {%>
+             <tr>
+            <td>Nombre</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            <td>Subtotal</td>
+            <td>Eliminar</td>
+            </tr>
+
+            <% foreach (var Item in ListaCarrito) 
+
+                {%>
         <tr>
-            <td>    </td>
-            <td>    </td>
-            <td>    </td>
+            <td> <% = Item.Articulo.Nombre %> </td>
+            <td> <% = Item.Cantidad %> </td>
+            <td> <% = Item.Articulo.Precio %>   </td>
+            <td> <% = Item.Cantidad * Item.Articulo.Precio %></td>
+            <td> <a href="Carrito.aspx?ID=<% = Item.Articulo.Id.ToString() %>" class="glyphicon glyphicon-remove"></a></td>
         </tr>
-        <tr>
-            <td>    </td>
-            <td>    </td>
-            <td>    </td>
-        </tr>
+        <% } %>
+        <% } %>
     </table>
 
 </asp:Content>
