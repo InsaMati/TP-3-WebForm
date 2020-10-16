@@ -2,7 +2,12 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    
+     <!-- No se como centrar el TextBox jaja, quedo medio feo  -->
+    <div class="container">  
+     <asp:TextBox class="form-control" runat="server" ID="FiltroBusqueda" placeholder="Buscar" Style="font-size:15px" TextMode="Search" OnTextChanged="FiltroBusqueda_TextChanged" />
+     </div>
+  
+    <br />
     <div class="container">
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>

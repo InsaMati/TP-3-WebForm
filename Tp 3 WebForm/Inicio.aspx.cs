@@ -31,5 +31,31 @@ namespace Tp_3_WebForm
             }
         }
 
+        protected void FiltroBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> Filtro;
+
+            try
+            {
+                if(FiltroBusqueda.Text == "")
+                {
+                    Filtro = ListaArticulos;
+                }
+
+                else
+                {
+                    Filtro = ListaArticulos.FindAll(J => J.Nombre.ToLower().Contains(FiltroBusqueda.Text.ToLower()));
+                    repetidor.DataSource = Filtro;
+                    repetidor.DataBind();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
