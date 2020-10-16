@@ -2,11 +2,12 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-     <!-- No se como centrar el TextBox jaja, quedo medio feo  -->
-    <div class="container">  
-     <asp:TextBox class="form-control" runat="server" ID="FiltroBusqueda" placeholder="Buscar" Style="font-size:15px" TextMode="Search" OnTextChanged="FiltroBusqueda_TextChanged" />
-     </div>
-  
+    <!-- No se como centrar el TextBox jaja, quedo medio feo  -->
+    <div class="container">
+        <asp:TextBox class="form-control" runat="server" ID="FiltroBusqueda" placeholder="Buscar" Style="font-size: 15px" TextMode="Search" OnTextChanged="FiltroBusqueda_TextChanged" />
+
+    </div>
+
     <br />
     <div class="container">
         <asp:Repeater runat="server" ID="repetidor">
@@ -19,7 +20,15 @@
                             <p class="card-text" style="font-size: 15px"><%#Eval("Descripcion")%></p>
                         </div>
                     </div>
-                     <a class="btn btn-primary" style="font-size: 12px;" href="ArticuloSeleccionado.aspx?id=<%#Eval("Id")%>">Ver</a>
+                    <br />
+                    <a class="btn btn-primary" style="font-size: 12px;" href="ArticuloSeleccionado.aspx?id=<%#Eval("Id")%>">
+                        <span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;  
+                        Ver
+                    </a>
+                    <a class="btn btn-success" style="font-size: 12px;" href="Carrito.aspx">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;  
+                        Agregar
+                    </a>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -27,6 +36,6 @@
     </div>
     <br />
     <br />
-    
+
 
 </asp:Content>
