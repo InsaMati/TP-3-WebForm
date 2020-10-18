@@ -23,12 +23,9 @@
                     <br />
                     <a class="btn btn-primary" style="font-size: 12px;" href="ArticuloSeleccionado.aspx?id=<%#Eval("Id")%>">
                         <span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;  
-                        Ver
+                        Detalle
                     </a>
-                    <a class="btn btn-success" style="font-size: 12px;" href="Carrito.aspx">
-                        <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;  
-                        Agregar
-                    </a>
+                   
                 </div>
             </ItemTemplate>
         </asp:Repeater>

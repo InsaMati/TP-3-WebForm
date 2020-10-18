@@ -62,5 +62,19 @@ namespace Tp_3_WebForm
                 throw;
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Redirect("Inicio.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

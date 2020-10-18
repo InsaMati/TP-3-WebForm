@@ -80,15 +80,45 @@ namespace Tp_3_WebForm
                 Carro.Cantidad = Convert.ToInt32(TxtCantidad.Text);
                 Carro.Articulo = MostrarArticulo;
 
+                bool validar = new bool();
+                
                 if (Session[Session.SessionID + "Lista"] != null)
                 {
                     ListaCarro = (List<CarritoCompra>)Session[Session.SessionID + "Lista"];
                 }
-               
-                ListaCarro.Add(Carro);
-                Session[Session.SessionID + "Lista"] = ListaCarro;
 
-                Response.Redirect("Carrito.aspx");
+                foreach (var J in ListaCarro)
+                {
+                    if (J.Articulo.Id == MostrarArticulo.Id)
+                    {
+                        //int cant = J.Cantidad + Convert.ToInt32(TxtCantidad.Text);
+                        //Carro.Cantidad = cant;
+                        //var indice = ListaCarro.FindIndex(K => K.Articulo.Id == Carro.Articulo.Id);
+                        //ListaCarro.Insert(indice, Carro);
+
+                        J.Cantidad += Convert.ToInt32(TxtCantidad.Text);
+                        ListaCarro.Remove(J);
+                        ListaCarro.Add(J);
+                        Session[Session.SessionID + "Lista"] = ListaCarro;
+                        Response.Redirect("Carrito.aspx");
+
+                        validar = true;
+                    }
+                    else
+                    {
+                        validar = false;
+                    }
+                 
+                   
+                }
+
+                if(validar == false)
+                {
+                        ListaCarro.Add(Carro);
+                        Session[Session.SessionID + "Lista"] = ListaCarro;
+                        Response.Redirect("Carrito.aspx");
+
+                }
             }
         }
     }
