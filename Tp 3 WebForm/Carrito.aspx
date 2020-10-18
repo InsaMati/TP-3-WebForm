@@ -22,7 +22,7 @@
             <td> <% = Item.Cantidad %> </td>
             <td> <% = Item.Articulo.Precio %>   </td>
             <td> <% = Item.Cantidad * Item.Articulo.Precio %></td>
-            <td> <a href="Carrito.aspx?ID=<% = Item.Articulo.Id.ToString() %>" class="glyphicon glyphicon-remove"></a></td>
+            <td> <a href="Carrito.aspx?ID=<% = Item.Articulo.Id.ToString() %>" class="glyphicon glyphicon-trash"></a></td>
         </tr>
         <% } %>
         <% } %>

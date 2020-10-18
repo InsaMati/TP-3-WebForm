@@ -32,6 +32,8 @@ namespace Tp_3_WebForm
                 if (Eliminar != null)
                 {
                     CarritoCompra vaciado = ListaCarrito.Find(j => j.Articulo.Id == int.Parse(Eliminar));
+                    ListaCarrito.Remove(vaciado);
+                    Session[Session.SessionID + "Lista"] = ListaCarrito;
                 }
 
 
