@@ -44,5 +44,23 @@ namespace Tp_3_WebForm
 
            
         }
+
+        protected void btnVaciar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(ListaCarrito != null)
+                {
+                    ListaCarrito.Clear();
+                    Session[Session.SessionID + "Lista"] = ListaCarrito;
+                    Response.Redirect("Carrito.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

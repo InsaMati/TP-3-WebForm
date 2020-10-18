@@ -28,4 +28,6 @@
         <% } %>
     </table>
 
+    <asp:Button Text="Vaciar" ID="btnVaciar" runat="server" OnClick="btnVaciar_Click" />
+
 </asp:Content>
