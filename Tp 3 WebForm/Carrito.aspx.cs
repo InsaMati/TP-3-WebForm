@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Antlr.Runtime.Misc;
 using Dominio;
 using Negocio;
 
@@ -34,11 +35,25 @@ namespace Tp_3_WebForm
                     CarritoCompra vaciado = ListaCarrito.Find(j => j.Articulo.Id == int.Parse(Eliminar));
                     ListaCarrito.Remove(vaciado);
                     Session[Session.SessionID + "Lista"] = ListaCarrito;
+
+                    CantidadArticulos += vaciado.Cantidad;
+                    CantidadArticulos = CantidadArticulos - vaciado.Cantidad;
+
+                    Session[Session.SessionID + "Cantidad"] = CantidadArticulos;
+
                 }
 
+                foreach (var Aux in ListaCarrito)
+                {
+                    CantidadArticulos += Aux.Cantidad;
+                    Session[Session.SessionID + "Cantidad"] = CantidadArticulos;
 
+                    if (Session[Session.SessionID + "Cantidad"] != null)
+                    {
+                        CantidadArticulos = (int)Session[Session.SessionID + "Cantidad"];
+                    }
 
-
+                }
 
             }
 
@@ -52,14 +67,18 @@ namespace Tp_3_WebForm
                 if(ListaCarrito != null)
                 {
                     ListaCarrito.Clear();
+                    CantidadArticulos = 0;
+
                     Session[Session.SessionID + "Lista"] = ListaCarrito;
+                    Session[Session.SessionID + "Cantidad"] = CantidadArticulos;
+
                     Response.Redirect("Carrito.aspx");
                 }
             }
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
@@ -73,7 +92,7 @@ namespace Tp_3_WebForm
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }
